@@ -10,7 +10,7 @@ class PhotosController < ApplicationController
         # @user = User.find(photo_params[:user_id])
         @photo = Photo.new(photo_params)
         if @photo.save
-            render json: @photo
+            render json: @photo, methods: :url
         else
             render json: @photo.errors
         end

@@ -5,6 +5,6 @@ button.addEventListener("click", async (e) => {
   const form = document.querySelector("form");
   const userData = new FormData(form);
   console.dir(userData)
-  const resp = await axios.post("http://localhost:3000/photos", userData);
+  const resp = await axios.post("https://simple-photo.herokuapp.com/photos", userData);
   console.log(resp);
 });
